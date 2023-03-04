@@ -26,9 +26,9 @@ export const XMTP_ENV = IS_MAINNET ? 'production' : 'dev';
 export const XMTP_PREFIX = 'lens.dev/dm';
 
 // Application
-export const APP_NAME = 'Lenster';
+export const APP_NAME = 'VerifiedChain';
 export const DESCRIPTION =
-  'Lenster is a composable, decentralized, and permissionless social media web app built with Lens Protocol 🌿';
+  'erifiedChain is a safe, decentralized social media web app built with Lens Protocol';
 export const APP_VERSION = packageJson.version;
 
 // Git

@@ -1,5 +1,5 @@
 export const apps = [
-  'lenster',
+  'VerifiedChain',
   'lenstube',
   'lenstube-bytes',
   'orb',

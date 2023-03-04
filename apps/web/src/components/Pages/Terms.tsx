@@ -41,7 +41,7 @@ const Terms: FC = () => {
               <div className="space-y-5 leading-7">
                 <p>
                   <Trans>
-                    The website lenster.xyz” (the “Site”) offers information, tools and services to you to
+                    The website verifiedchain” (the “Site”) offers information, tools and services to you to
                     allow you to interact with the Lens Protocol - a composable and decentralised social graph
                     protocol.
                   </Trans>
@@ -341,7 +341,7 @@ const Terms: FC = () => {
                 <Trans>12. Contact Information</Trans>
               </div>
               <p className="leading-7">
-                <Trans>Questions about the Terms should be sent to us at terms@lenster.xyz</Trans>
+                <Trans>Questions about the Terms should be sent to us at terms@VerifiedChain</Trans>
               </p>
               {/* 12. Contact Information ends */}
             </div>
