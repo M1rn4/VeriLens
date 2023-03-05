@@ -19,5 +19,5 @@ export const GridItemFour: FC<Props> = ({ children, className = '' }) => {
 };
 
 export const GridItemEight: FC<Props> = ({ children, className = '' }) => {
-  return <div className={`col-span-12 mb-5 md:col-span-12 lg:col-span-8 ${className}`}>{children}</div>;
+  return <div className={`col-span-12 mb-5 md:col-span-12 lg:col-span-12 ${className}`}>{children}</div>;
 };
