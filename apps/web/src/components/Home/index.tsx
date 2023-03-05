@@ -3,6 +3,7 @@ import NewPost from '@components/Composer/Post/New';
 import ExploreFeed from '@components/Explore/Feed';
 import { GridItemEight, GridItemFour, GridLayout } from '@components/UI/GridLayout';
 import { Mixpanel } from '@lib/mixpanel';
+import axios from 'axios';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { useAppStore } from 'src/store/app';
@@ -25,9 +26,42 @@ const Home: NextPage = () => {
     Mixpanel.track(PAGEVIEW, { page: 'home' });
   }, []);
 
+  const [response, setResponse] = useState<any>();
+  const [text, setText] = useState('');
+  let puntajeMax;
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    try {
+      const responses = await axios.post('http://127.0.0.1:5000/predict', { data: text });
+      setResponse(responses.data);
+      puntajeMax = Math.max(response.adult, response.no_adult);
+      console.log(puntajeMax, 'puntaje max');
+
+      if (puntajeMax >= 9) {
+        /*  mint(puntajeMax); */
+      } else if (puntajeMax <= 8 && puntajeMax >= 5) {
+        /* manda a los nodos  */
+      } else {
+        console.log('error');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleTextareaChange = (event: any) => {
+    setText(event.target.value);
+  };
+
   return (
     <>
       <MetaTags />
+      <div>
+        <form action="" onSubmit={handleSubmit}>
+          <textarea name="" id="" rows={10} onChange={handleTextareaChange} />
+          <button type="submit"> Submit </button>
+        </form>
+      </div>
       {!currentProfile}
       <GridLayout>
         <GridItemEight className="space-y-5">
