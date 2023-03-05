@@ -15,7 +15,7 @@ const Tags: FC<Props> = ({ title, description, image, cardType = 'summary', sche
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta charSet="UTF-8" />
-      <meta property="og:url" content="https://lenster.xyz" />
+      <meta property="og:url" content="https://.xyz" />
       <meta property="og:site_name" content="Lenster" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
