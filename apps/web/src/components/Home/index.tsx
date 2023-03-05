@@ -1,7 +1,6 @@
 import MetaTags from '@components/Common/MetaTags';
 import NewPost from '@components/Composer/Post/New';
 import ExploreFeed from '@components/Explore/Feed';
-import Footer from '@components/Shared/Footer';
 import { GridItemEight, GridItemFour, GridLayout } from '@components/UI/GridLayout';
 import { Mixpanel } from '@lib/mixpanel';
 import type { NextPage } from 'next';
@@ -12,7 +11,6 @@ import { PAGEVIEW } from 'src/tracking';
 import EnableDispatcher from './EnableDispatcher';
 import EnableMessages from './EnableMessages';
 import FeedType from './FeedType';
-import Hero from './Hero';
 import Highlights from './Highlights';
 import RecommendedProfiles from './RecommendedProfiles';
 import SetDefaultProfile from './SetDefaultProfile';
@@ -30,7 +28,7 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaTags />
-      {!currentProfile && <Hero />}
+      {!currentProfile}
       <GridLayout>
         <GridItemEight className="space-y-5">
           {currentProfile ? (
@@ -53,7 +51,6 @@ const Home: NextPage = () => {
               <RecommendedProfiles />
             </>
           ) : null}
-          <Footer />
         </GridItemFour>
       </GridLayout>
     </>
