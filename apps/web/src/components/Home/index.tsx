@@ -56,10 +56,30 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaTags />
-      <div>
-        <form action="" onSubmit={handleSubmit}>
-          <textarea name="" id="" rows={10} onChange={handleTextareaChange} />
-          <button type="submit"> Submit </button>
+      <div className="col-8 mx-auto">
+        <form onSubmit={handleSubmit}>
+          <textarea
+            name=""
+            id=""
+            rows={10}
+            onChange={handleTextareaChange}
+            value={text}
+            style={{ padding: '10px' }}
+          />
+          <button type="submit" style={{ backgroundColor: 'blue', padding: '10px' }}>
+            Submit
+          </button>
+          if(text)
+          {
+            <span>
+              {response && (
+                <div>
+                  <p>Literatura: {response.no_adult}</p>
+                  <p>Biografias: {response.adult}</p>
+                </div>
+              )}
+            </span>
+          }
         </form>
       </div>
       {!currentProfile}
