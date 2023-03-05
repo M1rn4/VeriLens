@@ -28,7 +28,7 @@ export const XMTP_PREFIX = 'lens.dev/dm';
 // Application
 export const APP_NAME = 'VerifiedChain';
 export const DESCRIPTION =
-  'erifiedChain is a safe, decentralized social media web app built with Lens Protocol';
+  'VerifiedChain is a safe, decentralized social media web app built with Lens Protocol';
 export const APP_VERSION = packageJson.version;
 
 // Git
